@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="UTF-8" http-equiv="encoding">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113157672-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113157672-1');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ND57HRS');</script>
+<!-- End Google Tag Manager -->
+<title>Fed up?</title>
+
+<style>
+	/*@font-face {
+		font-family: newyorker;
+		src: url(fonts/NEWYORKR.TTF);
+	}*/
+	body{
+		/*background: rgb(40, 40, 40);
+		background: rgb(10, 20, 30);
+		background: black;*/
+		background-image: url('darkbluebackground.png');
+	}
+	#svgsidebarforkeys{
+		position: fixed;
+		z-index: 2;
+	}
+	#canvashidden, #canvasselectedhidden{
+		position: fixed;
+		z-index: -1;
+	}
+	#canvas, #canvasselected {
+		position: relative;
+		z-index: 1;
+	}
+	#title{
+		color: white;
+		font-family: roboto light, verdana; 
+		text-align: center;
+	}
+	#sidediv, #canvashiddenkeys1, #canvashiddenkeys2{
+		position: fixed;
+		left: 10px;
+	}
+	#bookinfo{
+		position: fixed;
+		left: 10px;
+		visibility: hidden;
+		color: white;
+		font-family: roboto light, verdana;
+		overflow: hidden;
+	}
+	#booktitle{
+		margin: 10px;
+	}
+	#bookdescription{
+		margin: 10px;
+	}
+	#createkey{
+		position: fixed;
+		left: 10px;
+		top: 10px;
+		visibility: hidden;
+	}
+	#textkey{
+		position: relative;
+		color: white;
+		visibility: hidden;
+		font-family: roboto, verdana;
+		left: 10px;
+	}
+	input{
+		font-family: roboto black, verdana;
+	}
+	#tutopart1, #tutopart2{
+		position: fixed;
+		color: white;
+		font-family: roboto light, verdana;
+		font-size: 1.5vw;
+		background-color: rgb(30, 40, 50);
+	}
+	ul{
+		list-style-type: none;
+	}
+	strong{
+		color: red;
+	}
+</style>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND57HRS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<h1 id="title">AI powered discovery</h1>
+
+<button id="createkey" class="w3-button w3-xlarge w3-circle w3-red w3-card-4">+</button>
+
+<div id="textkey">
+  Nom de l'étagère:
+  <input placeholder="Nom de la nouvelle étagère" type="text" name="Key name">
+</div>
+
+
+<div id="sidediv"></div>
+
+<div id="bookinfo">
+	<h3 id="booktitle"></h3>
+	<p id="bookdescription"></p>
+</div>
+
+<div id="maindiv">
+	<svg id="svgsidebarforkeys"></svg>
+	<div id="divcanvas">
+		<div id="tutopart1">
+		<p>
+			<ul>
+				<li>
+					- Bienvenue dans <strong>LibFarer</strong>! La collecte et l'exploitation intelligente de centaines de millions de données de lectures individuelles ont permis le développement de <strong>LibFarer</strong>, une technologie unique d'exploration et de découverte visuelles des livres qui combine l'expertise du libraire et la puissance des algorithmes.
+				</li>
+				<li>
+					- Grâce à <strong>LibFarer</strong>, vous pourrez pour la première fois feuilleter des étagères!		
+				</li>
+				<li>
+					- Choisissez d'abord une thématique parmi celles concoctées par nos libraires. Une première étagère s'affiche.  Feuilletez la en déplaçant votre souris sur les couvertures.		
+				</li>
+			</ul>
+		</p>
+		</div>
+	</div>
+	<div id="canvasselectedcovers">
+		<div id="tutopart2">
+		<p>
+			<ul>
+				<li>
+					- Une couverture vous intéresse, cliquez dessus. Elle s'affichera sous l'étagère. Une deuxième retient votre attention, faites de même et ainsi de suite.
+				</li>
+				<li>
+					- Lorsque vous cliquez sur une des couvertures que vous avez retenues, vous affichez une nouvelle étagère à feuilleter. Bravo, vous venez d'appeler l'intelligence artificielle de <strong>LibFarer</strong> à la rescousse! <strong>Libfarer</strong> prend le relais des libraires pour vous suggérer de nouveaux feuilletages. 		
+				</li>
+				<li>
+					- A tout moment vous pouvez bien sûr sauvegarder sous forme d'une étagère les couvertures que vous avez sélectionnées.		
+				</li>
+			</ul>
+		</p>
+		</div>
+	</div>
+</div>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/he/1.1.1/he.js"></script>
+<script src="js/accordion.js"></script>
+
+</body>

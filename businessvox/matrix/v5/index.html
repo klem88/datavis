@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="UTF-8" http-equiv="encoding">
+<title>Fed up?</title>
+
+<style>
+	@font-face {
+		font-family: newyorker;
+		src: url(fonts/NEWYORKR.TTF);
+	}
+	body{
+		/*background: rgb(40, 40, 40);
+		background: rgb(10, 20, 30);
+		background: black;*/
+		background-image: url('darkbluebackground.png');
+	}
+	#canvashidden, #canvasselectedhidden {
+		position: fixed;
+		z-index: -1;
+	}
+	#canvas, #canvasselected {
+		position: relative;
+		z-index: 1;
+	}
+	h1{
+		color: white;
+		font-family: newyorker;
+		text-align: center;
+	}
+	#sidediv, #canvashiddenkeys {
+		position: fixed;
+	}
+</style>
+
+<body>
+
+<h1 id="title">Fed up with search engines?</h1>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="js/accordion.js"></script>
+
+</body>
